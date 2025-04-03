@@ -1,5 +1,4 @@
 <?php
-// Funzione per controllare se il sito è disabilitato
 function isSiteDisabled() {
     $file_path = 'site_disabled.txt';
     
@@ -11,7 +10,6 @@ function isSiteDisabled() {
     return false;
 }
 
-// Impedisce la navigazione se il sito è disabilitato
 if (isSiteDisabled()) {
     header("HTTP/1.1 503 Service Unavailable");
     echo "<h1>Sito momentaneamente disabilitato</h1>";
